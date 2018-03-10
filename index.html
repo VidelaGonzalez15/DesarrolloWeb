@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="css/estilo.css">
+	<script  async type="text/javascript" src="js/carmen.js"></script>
+	<title>Formulario</title>
+</head>
+
+<body background="fondo/foto8.jpg" >
+
+	<form name="formulario" method="post" id="formulario">
+		<font color= "#17202A">
+				<h1  align="center"  >F o r m u l a r i o </h1>
+		</font>
+
+
+		<label for="date">Fecha</label></br>
+		<input id="date" type="date" name="date"></br></br>
+
+		<label for="hora">Hora de Registro</label></br>
+		<input type="time" id="hora" name="usr_time"></br></br>
+
+		
+		<label for="producto">Producto</label></br>
+	    <select name="producto" id="producto"><option value="" selected="selected"></option>
+           <option value="Collar">Collar</option>
+           <option value="Pendiente">Pendiente</option>
+           <option value="Pulseras">Pulseras</option>
+       </select></br></br>
+
+        <label for="color">Color</label><br/> 
+	  	<input id="color" type="color" name="favcolor"></br></br>
+
+       	<label for="codigo">Codigo del Producto</label><br/>  
+	  	<input id="codigo" type="text" name="codigo"></br></br>
+
+	  	<label id="medio">Medio de Pago</label><br/>
+		<input type="radio" name="medio" id="medio"> Efectivo <br/>
+		<input type="radio" name="medio" id="medio"> Consignacion<br/>
+		</br> 
+
+		<label for="pais">Pais</label></br>
+	    <select name="pais" id="pais"><option value="" selected="selected"></option>
+           <option value="estadosunidos">Estados Unidos</option>
+           <option value="canada">Canadá</option>
+           <option value="reinounido">Reino Unido</option>
+           <option value="francia">Francia</option>
+           <option value="espana">España</option>
+           <option value="italia">Italia</option>
+           <option value="china">China</option>
+           <option value="japon">Japón</option>
+       </select></br></br>
+
+        <label for="rango">Dias en llegar</label></br>
+		<input id="rango" type="range" name="points" min="1" max="45"></br></br>
+
+		<label for="peso">Peso</label></br>
+		<input id="peso" type="number" name="peso" min="1"></br></br>
+
+		<label for="telefono">Teléfono</br>
+		<input id="telefono" type="tel" name="usrtel"></br></br>
+
+		<label for="correo">Correo</br>
+		<input id="email" type="email" name="email"></br></br>	
+
+		<input type="checkbox" name="terminos" id="terminos">
+		<label for="terminos"> Acepto términos y condiciones</label></br></br></br>
+
+
+		<button type="button" class="boton" onclick="validacion();"> Registrar</button> 
+		<button type="reset" class="boton">Limpiar formulario</button>
+	</form>
+</p>
+
+			<label> OPCIONES DE BUSQUEDA  </label></p>
+			<select id="buscar">
+			<option value="tel" >Telefono </option>
+			<option value="email" >Correo</option>
+			<option value="pais" >Pais </option>
+			<option value="peso" >Peso</option>
+			<option value="codigo" >Codigo </option>
+			
+			 </select>
+
+			<input type="text" id="searchTerm" placeholder="buscar" ></br></br>
+			<button type="button" onclick= "doSearch()" >Buscar</button>
+			
+
+	<center>
+		<h1>   DATOS DEL CONTACTO  </h1></br>			
+			<table  border="2" id="Tabla">
+			<tr>
+				<th>Fecha de Registro</th>
+				<th>Hora de Registro</th>
+				<th>Producto</th>
+				<th>Color</th>
+				<th>Codigo del producto</th>
+				<th>Medio de pago</th>
+				<th>Pais</th>
+				<th>Dias en llegar</th>
+				<th>Peso</th>
+				<th>Telefono</th>
+				<th>Email</th>							
+			</tr>
+			</table></br>
+	</center>
+</body>
+</html>
